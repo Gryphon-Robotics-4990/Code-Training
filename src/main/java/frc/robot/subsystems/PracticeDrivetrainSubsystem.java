@@ -7,12 +7,12 @@ import com.ctre.phoenix.motorcontrol.can.TalonSRXConfiguration;
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 
-public class PracticeDrivetrain extends SubsystemBase
+public class PracticeDrivetrainSubsystem extends SubsystemBase
 {
     private WPI_TalonSRX leftTalon, rightTalon;
     private WPI_VictorSPX leftVictor, rightVictor;
     
-    public PracticeDrivetrain()
+    public PracticeDrivetrainSubsystem()
     {
         leftTalon = new WPI_TalonSRX(Ports.CAN_DRIVETRAIN_LEFT_FRONT_TALONSRX);
         rightTalon = new WPI_TalonSRX(Ports.CAN_DRIVETRAIN_RIGHT_FRONT_TALONSRX);
@@ -25,6 +25,22 @@ public class PracticeDrivetrain extends SubsystemBase
         rightTalon.setSelectedSensorPosition(0);
     }
 
+    public int getVelocityRight() {
+        return (int)m_rightFrontTalon.getSelectedSensorVelocity();
+    }
+
+    public int getVelocityLeft() {
+        return (int)m_leftFrontTalon.getSelectedSensorVelocity();
+    }
+
+    public int getErrorLeft() {
+        return (int)m_leftFrontTalon.getClosedLoopError();
+    }
+
+    public int getErrorRight() {
+        return (int)m_rightFrontTalon.getClosedLoopError();
+    }
+    
     public void configureMotors()
     {
         leftTalon.configFactoryDefault();
