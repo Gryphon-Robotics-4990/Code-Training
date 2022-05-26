@@ -8,7 +8,7 @@ import com.ctre.phoenix.motorcontrol.ControlMode;
 
 public class PracticeTurretCommand extends CommandBase 
 {
-    private PracticeTurretCommand turret;
+    private PracticeTurretSubsystem turret;
     private DoubleSupplier supplier;
 
     public PracticeTurretCommand(PracticeTurretSubsystem inputTurret)

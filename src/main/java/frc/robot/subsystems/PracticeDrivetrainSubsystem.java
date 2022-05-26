@@ -52,10 +52,10 @@ public class PracticeDrivetrainSubsystem extends SubsystemBase
         rightTalon.setSensorPhase(false);
 
         leftTalon.setInverted(true);
-        leftVictor.setInverted(true);
+        rightTalon.setInverted(true);
         
-        leftVictor.follow(leftTalon);
-        rightVictor.follow(rightTalon);
+        leftVictor.follow(leftTalon, MotorConfig.DEFAULT_MOTOR_FOLLOWER_TYPE);
+        rightVictor.follow(rightTalon, MotorConfig.DEFAULT_MOTOR_FOLLOWER_TYPE);
 
         leftTalon.configSelectedFeedbackSensor(MotorConfig.TALON_DEFAULT_FEEDBACK_DEVICE, MotorConfig.TALON_DEFAULT_PID_ID, MotorConfig.TALON_TIMEOUT_MS);
         rightTalon.configSelectedFeedbackSensor(MotorConfig.TALON_DEFAULT_FEEDBACK_DEVICE, MotorConfig.TALON_DEFAULT_PID_ID, MotorConfig.TALON_TIMEOUT_MS);

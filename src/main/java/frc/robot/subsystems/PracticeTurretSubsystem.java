@@ -13,7 +13,7 @@ public PracticeTurretSubsystem extends SubsystemBase
 
     public PracticeTurretSubsystem()
     {
-        talon = new WPI_TalonSRX(CAN_TURRET_TALONSRX);
+        talon = new WPI_TalonSRX(Ports.CAN_TURRET_TALONSRX);
         desired = 0.0;
 
         configureMotors();
@@ -44,10 +44,20 @@ public PracticeTurretSubsystem extends SubsystemBase
 
     public void configureMotors()
     {
+        talon.configFactoryDefault();
+
+        talon.setSensorPhase(false);
+
+        talon.setInverted(false);
+
         talon.configSelectedFeedbackSensor(MotorConfig.TALON_DEFAULT_FEEDBACK_DEVICE, MotorConfig.TALON_DEFAULT_PID_ID, MotorConfig.TALON_TIMEOUT_MS);
 
         TalonSRXConfiguration t = new TalonSRXConfiguration();
 
-        t.slot0 = TURRET_PID;
+        t.slot0 = MotionControl.TURRET_PID;
+
+        talon.setNeutralMode(NeutralMode.Brake);
+
+        talon.configAllSettings(t);
     }
 }
