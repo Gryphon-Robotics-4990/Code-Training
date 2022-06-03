@@ -1,10 +1,7 @@
-package frc.robot.subsystems;
+package frc.robot.commands;
 import frc.robot.Constants.*;
+import frc.robot.subsystems.PracticeIntakeSubsystem;
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
-import com.ctre.phoenix.motorcontrol.can.TalonSRXConfiguration;
-import com.ctre.phoenix.motorcontrol.NeutralMode;
-import com.ctre.phoenix.motorcontrol.ControlMode;
 
 public class PracticeIntakeCommand extends CommandBase 
 {

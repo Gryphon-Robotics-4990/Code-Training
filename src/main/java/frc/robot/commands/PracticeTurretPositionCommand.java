@@ -3,25 +3,21 @@ import frc.robot.Constants.*;
 import frc.robot.subsystems.PracticeTurretSubsystem;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
-public class PracticeTurretCommand extends CommandBase 
+public class PracticeTurretPositionCommand extends CommandBase
 {
     private PracticeTurretSubsystem turret;
-    private DoubleSupplier supplier;
+    private double position;
 
-    public PracticeTurretCommand(PracticeTurretSubsystem inputTurret)
+    public PracticeTurretPositionCommand(PracticeTurretSubsystem inputTurret, double inputPosition)
     {
         turret = inputTurret;
+        position = inputPosition;
         addrequirements(inputTurret);
-    }
-
-    public void setSupplier(DoubleSupplier inputSupplier)
-    {
-        supplier = inputSupplier;
     }
 
     @Override
     public void execute()
     {
-        turret.setPosition(supplier.getAsDouble()*4096);
+        turret.setPosition(position);
     }
 }
