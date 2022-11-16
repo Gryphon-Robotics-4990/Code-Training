@@ -159,6 +159,7 @@ public final class Constants {
         public static TalonSRXGains DRIVETRAIN_RIGHT_PID = new TalonSRXGains(0.2, 0.0033, 12);
         //public static TalonSRXGains SHOOTER_BOTTOM_PID = new TalonSRXGains(0.45, 0.0001, 25);
         public static TalonSRXGains SHOOTER_BOTTOM_PID = new TalonSRXGains(0.1, 0.00005, 10);
+        public static TalonSRXGains SHOOTER_PID = new TalonSRXGains(0.9, 0.0053, 6);
         public static TalonSRXGains TURRET_OLD_PID = new TalonSRXGains(1, 0.00035, 5); // didn't work during SFR
         public static TalonSRXGains TURRET_PID = new TalonSRXGains(1, 0.00005, 16); // Don't ask
 
