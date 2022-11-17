@@ -12,7 +12,7 @@ import frc.robot.units.*;
 public final class Constants {
     public static class Ports {
         //Laptop ports
-        public static int PORT_JOYSTICK_DRIVE = 0;
+        public static int PORT_JOYSTICK_DRIVE = 1;
         public static int PORT_JOYSTICK_OPERATOR = 1;
 
         //RoboRIO sensor ports
