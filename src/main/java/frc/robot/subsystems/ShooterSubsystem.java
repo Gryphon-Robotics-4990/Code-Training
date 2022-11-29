@@ -1,3 +1,5 @@
+//chiara
+
 package frc.robot.subsystem;
 import frc.roboto.Constants.*;
 
@@ -32,6 +34,6 @@ public class ShooterSubsystem(){
     public void shoot(double shooterspeed){
         leftTalon.set(ControlModel.Velocity, shooterspeed);
     }
-    
+
     
 }
