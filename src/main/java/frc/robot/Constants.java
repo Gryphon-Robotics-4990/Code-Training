@@ -36,8 +36,8 @@ public final class Constants {
         public static int CAN_INTAKE_RIGHT_TALONSRX = 8;
         public static int CAN_PRESHOOTER_TALONSRX = 7;
         //
-        public static int CAN_SHOOTER_LEFT_BOTTOM_TALONSRX = 11;
-        public static int CAN_SHOOTER_RIGHT_BOTTOM_TALONSRX = 23;
+        public static int CAN_SHOOTER_LEFT_TALONSRX = 11;
+        public static int CAN_SHOOTER_RIGHT_VICTORSRX = 23;
         public static int CAN_PCM = 12;
         
         //AJ's air pressure magic:
