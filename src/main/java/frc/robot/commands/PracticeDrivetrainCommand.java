@@ -12,7 +12,7 @@ public class PracticeDrivetrainCommand extends CommandBase
     public PracticeDrivetrainCommand(PracticeDrivetrainSubsystem inputDrivetrain)
     {
         drivetrain = inputDrivetrain;
-        addrequirements(inputDrivetrain);
+        addRequirements(inputDrivetrain);
     }
 
     public void setSuppliers(DoubleSupplier inputSpeed, DoubleSupplier inputDrivetrain)
@@ -29,6 +29,6 @@ public class PracticeDrivetrainCommand extends CommandBase
         speeds[0] *= SubsystemConfig.DRIVETRAIN_MAXIMUM_TESTED_ENCODER_VELOCITY;
         speeds[1] *= SubsystemConfig.DRIVETRAIN_MAXIMUM_TESTED_ENCODER_VELOCITY;
 
-        drivetrain.driveRaw(speeds[0]*0.4, speeds[1]*0.4);
+        drivetrain.drive(speeds[0]*0.4, speeds[1]*0.4);
     }
 }

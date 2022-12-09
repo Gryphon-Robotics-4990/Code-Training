@@ -9,22 +9,19 @@ import com.ctre.phoenix.motorcontrol.ControlMode;
 public PracticeTurretSubsystem extends SubsystemBase
 {
     private WPI_TalonSRX talon;
-    private double desired;
 
     public PracticeTurretSubsystem()
     {
         talon = new WPI_TalonSRX(Ports.CAN_TURRET_TALONSRX);
-        desired = 0.0;
 
-        configureMotors();
+        this.configureMotors();
         
         talon.setSelectedSensorPosition(0);
     }
 
     public void setPosition(double position)
     {
-        talon.set(ControlMode.position, position);
-        desired = position;
+        talon.set(ControlMode.Position, position);
     }
 
     public boolean isInPosition()
@@ -39,7 +36,7 @@ public PracticeTurretSubsystem extends SubsystemBase
 
     public double desiredPosition()
     {
-        return desired;
+        return talon.getClosedLoopTarget();
     }
 
     public void configureMotors()

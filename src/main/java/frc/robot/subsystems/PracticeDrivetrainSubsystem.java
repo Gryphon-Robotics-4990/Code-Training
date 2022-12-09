@@ -19,26 +19,26 @@ public class PracticeDrivetrainSubsystem extends SubsystemBase
         leftVictor = new WPI_VictorSPX(Ports.CAN_DRIVETRAIN_LEFT_REAR_TALONSRX);
         rightVictor = new WPI_VictorSPX(Ports.CAN_DRIVETRAIN_RIGHT_REAR_TALONSRX);
 
-        configureMotors();
+        this.configureMotors();
 
         leftTalon.setSelectedSensorPosition(0);
         rightTalon.setSelectedSensorPosition(0);
     }
 
-    public int getVelocityRight() {
-        return (int)m_rightFrontTalon.getSelectedSensorVelocity();
+    public double getVelocityRight() {
+        return leftTalon.getSelectedSensorVelocity();
     }
 
-    public int getVelocityLeft() {
-        return (int)m_leftFrontTalon.getSelectedSensorVelocity();
+    public double getVelocityLeft() {
+        return rightTalon.getSelectedSensorVelocity();
     }
 
-    public int getErrorLeft() {
-        return (int)m_leftFrontTalon.getClosedLoopError();
+    public double getErrorLeft() {
+        return leftTalon.getClosedLoopError();
     }
 
-    public int getErrorRight() {
-        return (int)m_rightFrontTalon.getClosedLoopError();
+    public double getErrorRight() {
+        return rightTalon.getClosedLoopError();
     }
     
     public void configureMotors()
@@ -52,7 +52,7 @@ public class PracticeDrivetrainSubsystem extends SubsystemBase
         rightTalon.setSensorPhase(false);
 
         leftTalon.setInverted(true);
-        rightTalon.setInverted(true);
+        rightTalon.setInverted(false);
         
         leftVictor.follow(leftTalon, MotorConfig.DEFAULT_MOTOR_FOLLOWER_TYPE);
         rightVictor.follow(rightTalon, MotorConfig.DEFAULT_MOTOR_FOLLOWER_TYPE);
