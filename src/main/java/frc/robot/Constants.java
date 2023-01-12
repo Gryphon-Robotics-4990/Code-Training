@@ -30,6 +30,10 @@ public final class Constants {
         public static int CAN_DRIVETRAIN_RIGHT_REAR_TALONSRX = 2;
         public static int CAN_DRIVETRAIN_LEFT_FRONT_TALONSRX = 3;
         public static int CAN_DRIVETRAIN_LEFT_REAR_TALONSRX = 4;
+        
+        // ADDED PRACTICE STUFF
+        public static int CAN_SHOOTER_LEFT_VICTORSRX = 6; 
+        public static int CAN_SHOOTER_RIGHT_TALONSRX = 5; 
 
         public static int CAN_TURRET_TALONSRX = 6;
 
