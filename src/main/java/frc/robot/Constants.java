@@ -8,7 +8,7 @@ import edu.wpi.first.math.controller.SimpleMotorFeedforward;
 import frc.robot.vision.*;
 import frc.robot.units.*;
 
-
+//ASSIGNING PLUG PORT NUMBERS//
 public final class Constants {
     public static class Ports {
         //Laptop ports
@@ -44,7 +44,7 @@ public final class Constants {
         public static int SOLENOID_PORT = 0;
         
     }
-
+//TALON STUFF//
     public static class MotorConfig {
         //Talon information
         public static double TALON_ENCODER_RESOLUTION = 4096; // = EPR = CPR
@@ -54,6 +54,7 @@ public final class Constants {
         public static FollowerType DEFAULT_MOTOR_FOLLOWER_TYPE = FollowerType.PercentOutput;
     }
 
+//DEFINING PHYSICAL CHARACTERISTICS//
     public static class RobotMeasurements {
         //TODO find robot physical characteristics
         public static double DRIVETRAIN_TRACKWIDTH = -1;
@@ -71,7 +72,8 @@ public final class Constants {
         public static double LIMELIGHT_HEIGHT_METERS = -1;
         public static double LIMELIGHT_ANGLE_RADIANS = -1;
     }
-    
+
+//DEFINING MEASURING UNITS//    
     public static class Units {
         //Base units
         public static Unit METER = new BaseUnit(Dimension.Length, 1d);
